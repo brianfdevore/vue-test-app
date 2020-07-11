@@ -2,7 +2,7 @@
     <div>
         <form @submit="addTodo">
             <input type="text" name="title" v-model="title" placeholder="Add Todo...">
-            <input type="submit" value="Submit" class="btn">
+            <input type="submit" value="Add Todo" class="btn">
         </form>
     </div>
 </template>
@@ -21,7 +21,6 @@ export default {
         addTodo(e) {
             e.preventDefault();
             const newTodo = {
-                id: 255,
                 title: this.title,
                 completed: false
             }
@@ -37,7 +36,8 @@ export default {
 
 <style scoped>
     form {
-        display: flex;
+        display: flex;        
+        justify-content: center;
     }
 
     input [type="text"] {
